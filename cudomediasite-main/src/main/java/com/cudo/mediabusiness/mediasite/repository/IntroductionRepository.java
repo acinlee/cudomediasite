@@ -27,7 +27,7 @@ public class IntroductionRepository {
     }
 
     public Introduction findRecentlyist() {
-        List<Introduction> introductions =  entityManager.createQuery("select intro from Introduction intro", Introduction.class).getResultList();
+        List<Introduction> introductions =  entityManager.createQuery("select intro from Introduction intro order by intro.register_date DESC", Introduction.class).getResultList();
         Introduction introduction = introductions.get(0);
         return introduction;
     }
