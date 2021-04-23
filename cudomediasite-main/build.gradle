@@ -23,12 +23,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 
-	// https://mvnrepository.com/artifact/org.modelmapper/modelmapper
-	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.9'
-	implementation 'android.arch.persistence.room:runtime:1.1.1'
-	annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
-
-	// https://mvnrepository.com/artifact/commons-io/commons-io
 	//파일 확장자
 	implementation group: 'commons-io', name: 'commons-io', version: '2.6'
 

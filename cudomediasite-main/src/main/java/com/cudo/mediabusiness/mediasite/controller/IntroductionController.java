@@ -37,6 +37,13 @@ public class IntroductionController {
     private final IntroductionService introductionService;
     private final FileService fileService;
 
+    @GetMapping("/members/introduction/download")
+    public String IntroductionDownload(Model model) {
+        IntroductionDto introductionDto = introductionService.getRecentlyIntroduction();
+        System.out.println(introductionDto.getId());
+        model.addAttribute("introduceRecently", introductionDto);
+        return "/members/introduceDownloadPage";
+    }
     @GetMapping("/admin/introduction")
     public String IntroductionList(Model model) {
         List<IntroductionDto> introductionDtoList = introductionService.getAllIntroduction();
