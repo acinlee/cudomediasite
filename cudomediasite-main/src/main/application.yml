@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cudo_db?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: Cudo6411!
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: leedongjun181027@gmail.com
+    password: ka8281bn!
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hiberante.type: trace
