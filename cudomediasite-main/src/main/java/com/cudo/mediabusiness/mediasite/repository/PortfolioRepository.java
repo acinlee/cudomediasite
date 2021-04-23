@@ -21,5 +21,4 @@ public interface PortfolioRepository extends JpaRepository<Portfolio, Long> {
     @Query("SELECT port FROM Portfolio port where port.show_check = 'FALSE' order by port.show_sequence")
     List<Portfolio> findAllNotExposure();
 
-
 }
